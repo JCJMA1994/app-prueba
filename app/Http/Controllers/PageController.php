@@ -42,5 +42,20 @@ class PageController extends Controller
       $notaNumero ->save();
 
       return back()->with('mensaje','Nota agregada');
+
+}
+public function  editar($id){
+    $nota =App\Nota::findOrFail($id);
+      return view('notas.editar',compact('nota'));
+}
+
+public function actualizar(Request $request, $id){
+      $notaUpdate = App\Nota::findOrFail($id);
+    $notaUpdate-> nombre = $request->nombre;
+    $notaUpdate-> descripción = $request->descripción;
+
+    $notaUpdate-> save();
+
+    return back()->with('mensaje','Nota Actualizada');
 }
 }

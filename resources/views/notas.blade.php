@@ -47,7 +47,7 @@
                     </td>
                 <td>{{$nota->descripción}}</td>
                 <td>
-                    <a href="" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{{route ('notas.editar',$nota)}}" class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
         @endforeach

@@ -26,3 +26,7 @@ Route::get('notas','PageController@notas')->name('notas');
 Route::get('notas/{id?}','PageController@detalle')->name('notas.detalle');
 
 Route::post('notas','PageController@crear')->name('notas.crear');
+
+Route::get('editar/{id}','PageController@editar')->name('notas.editar');
+
+Route::put('editar/{id}','PageController@actualizar')->name('notas.actualizar');
